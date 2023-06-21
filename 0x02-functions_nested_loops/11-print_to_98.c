@@ -25,9 +25,9 @@ void print_to_98(int n)
 		}
 		n++;
 	}
-	while (k > 98)
+	while (k >= 98)
 	{
-		if (k == 0)
+		if (k == 98)
 		{
 			printf("%d", k);
 		}
