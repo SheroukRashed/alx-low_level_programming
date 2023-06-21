@@ -22,16 +22,22 @@ void times_table(void)
 			if (mul <= 9)
 			{
 				putchar (mul + '0');
+				if (j != 9)
+				{
+					putchar (',');
+					putchar(' ');
+					putchar(' ');
+				}
 			}
 			else
 			{
 				putchar ((mul / 10) + '0');
 				putchar ((mul % 10) + '0');
-			}
-			if (j != 9)
-			{
-				putchar (',');
-				putchar(' ');
+				if (j != 9)
+				{
+					putchar (',');
+					putchar(' ');
+				}
 			}
 			j++;
 		}
