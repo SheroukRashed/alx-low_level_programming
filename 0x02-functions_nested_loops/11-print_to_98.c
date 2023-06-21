@@ -13,29 +13,35 @@ void print_to_98(int n)
 {
 	int k = n;
 
-	while (n <= 98)
+	if (n <= 98)
 	{
-		if (n == 98)
+		while (n <= 98)
 		{
-			printf("%d", n);
+			if (n == 98)
+			{
+				printf("%d", n);
+			}
+			else
+			{
+				printf("%d, ", n);
+			}
+			n++;
 		}
-		else
-		{
-			printf("%d, ", n);
-		}
-		n++;
 	}
-	while (k >= 98)
+	else
 	{
-		if (k == 98)
+		while (k >= 98)
 		{
-			printf("%d", k);
+			if (k == 98)
+			{
+				printf("%d", k);
+			}
+			else
+			{
+				printf("%d, ", k);
+			}
+			k--;
 		}
-		else
-		{
-			printf("%d, ", k);
-		}
-		k--;
 	}
 	putchar('\n');
 }
