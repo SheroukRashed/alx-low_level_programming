@@ -10,20 +10,27 @@ void more_numbers(void)
 {
 	int c = 0;
 	int i;
+	char zero = '0';
+	char whole;
+	char rem;
 
 	while (c < 10)
 	{
 		for (i = 0 ; i <= 14 ; i++)
 		{
+			rem = '*';
 			if (i <= 9)
 			{
-				_putchar(i + '0');
+				whole = zero + i;
 			}
 			else
 			{
-				_putchar((i / 10) + '0');
-				_putchar((i % 10) + '0');
+				whole = zero + (i / 10);
+				rem = zero + (i % 10);
 			}
+			_putchar(whole);
+			if (rem != '*')
+				_putchar(rem);
 		}
 		_putchar('\n');
 		c = c + 1;

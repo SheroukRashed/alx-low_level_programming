@@ -2,7 +2,7 @@
 /**
  * print_square - Entry point
  *
- * Description: 'This program will print '*' for number of times
+ * Description: 'This program will print '#' for number of times
  *
  * @size: Integer to be size
  */
@@ -19,7 +19,7 @@ void print_square(int size)
 	{
 		for (i = 0 ; i < size ; i++)
 		{
-			_putchar('*');
+			_putchar('#');
 		}
 		_putchar('\n');
 	}
