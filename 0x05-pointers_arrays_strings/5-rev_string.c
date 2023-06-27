@@ -11,16 +11,21 @@
  */
 void rev_string(char *s)
 {
-	/*int count = strlen(s);*/
+	int count = strlen(s) - 1;
 	char *rev;
-	/*int rev_counter = 0;*/	
-	rev = s - 1;
-	s = rev;
-	/**while (count >= 1)
-	{
-		*(rev + rev_counter) = *(s + count - 1);
-		count--;
-		rev_counter++;
-	}*/
+	char temp;
+	int rev_counter = 0;
 
+	rev = s;
+	s = rev + count;
+
+	while (rev_counter <= 0.5 * count)
+	{
+		temp = *rev;
+		*rev = *s;
+		*s = temp;
+		s--;
+		rev++;
+		rev_counter++;
+	}
 }
