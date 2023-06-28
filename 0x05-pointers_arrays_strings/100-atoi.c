@@ -13,13 +13,19 @@
  */
 int _atoi(char *s)
 {
-	int n = 0;
-	int digit = 0;
-	int i = 0;
+	int i, n, digit, pos, neg = 0;
 
 	while (s[i] != '\0')
 	{
-		if (s[i] >= '0' && s[i] <= '9')
+		if (s[i] == '+')
+		{
+			pos++;
+		}
+		else if (s[i] == '-')
+		{
+			neg++;
+		}
+		else if (s[i] >= '0' && s[i] <= '9')
 		{
 			if (n >= 0)
 			{
@@ -31,10 +37,6 @@ int _atoi(char *s)
 				digit = s[i] - '0';
 				n = (n * 10) - digit;
 			}
-			if (s[i - 1] == '-')
-			{
-				n = n * -1;
-			}
 		}
 		else
 		{
@@ -45,5 +47,5 @@ int _atoi(char *s)
 		}
 		i++;
 	}
-	return (n);
+	neg > pos ? return (-n) : return (n);
 }
