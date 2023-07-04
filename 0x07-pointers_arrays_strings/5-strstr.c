@@ -12,20 +12,35 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	unsigned int i = 0;
-	unsigned int j = 0;
-
-	for (j = 0 ; needle[j] != '\0' ; j++)
+	while (*haystack != '\0')
 	{
-		for (i = 0 ; haystack[i] != '\0' ; i++)
-		{		
-			if (haystack[i] == needle[j])
-			{
-				return (haystack + i);
-			}
+		if ((*haystack == *needle) && compare(haystack, needle))
+		{
+			return (haystack);
 		}
-
+		haystack++;
 	}
-
 	return (NULL);
+}
+
+/**
+ * compare - Entry point
+ *
+ * Description: 'This program will compare 2 strings
+ *
+ * @str1: Char* to be tested
+ * @str2: Char* to be tested
+ *
+ * Return: Integer (Success)
+ */
+int compare(char *str1, char *str2)
+{
+	int i;
+
+	for (i = 0 ; *str2 != '\0' ; i++)
+	{
+		if (str1[i] != str2[i])
+			return (0);
+	}
+	return (1);
 }
