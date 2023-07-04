@@ -20,6 +20,10 @@ char *_strstr(char *haystack, char *needle)
 		}
 		haystack++;
 	}
+
+	if (*needle == '\0')
+		return (haystack);
+
 	return (NULL);
 }
 
@@ -37,7 +41,7 @@ int compare(char *str1, char *str2)
 {
 	unsigned int i;
 
-	for (i = 0 ; str2[i] != '\0' ; i++)
+	for (i = 0 ; (str1[i] != '\0' && str2[i] != '\0') ; i++)
 	{
 		if (str1[i] != str2[i])
 			return (0);
