@@ -38,7 +38,7 @@ char *_strstr(char *haystack, char *needle)
  */
 int compare(char *str1, char *str2)
 {
-	int i;
+	unsigned int i;
 
 	for (i = 0 ;  str2[i] != '\0' ; i++)
 	{
