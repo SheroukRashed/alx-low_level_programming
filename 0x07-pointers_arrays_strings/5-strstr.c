@@ -39,12 +39,12 @@ char *_strstr(char *haystack, char *needle)
  */
 int compare(char *str1, char *str2)
 {
-	unsigned int i;
-
-	for (i = 0 ;  str2[i] != '\0' ; i++)
+	while (*str2 != '\0')
 	{
-		if (str1[i] == '\0' || str1[i] != str2[i])
+		if (*str1 == '\0' || *str1 != *str2)
 			return (0);
+		str1++;
+		str2++;
 	}
 	return (1);
 }
