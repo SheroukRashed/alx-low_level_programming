@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stddef.h>
 /**
  * _strstr - Entry point
  *
@@ -39,7 +38,7 @@ char *_strstr(char *haystack, char *needle)
  */
 int compare(char *str1, char *str2)
 {
-	unsigned int i;
+	int i;
 
 	for (i = 0 ;  str2[i] != '\0' ; i++)
 	{
