@@ -29,15 +29,15 @@ char *str_concat(char *s1, char *s2)
 		return (0);
 	}
 
-	while (i < size1 - 1)
+	while (i < size1)
 	{
 		str[i] = s1[i];
 		i++;
 	}
 
-	while (i < tot - 1)
+	while (i < tot)
 	{
-		str[i] = s2[i - (size1 - 1)];
+		str[i] = s2[i - (size1)];
 		i++;
 	}
 
