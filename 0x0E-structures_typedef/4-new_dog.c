@@ -30,8 +30,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog->owner = malloc(sizeof(char) * (len2 + 1));
 	if (dog->owner == NULL)
 	{
-		free(dog);
 		free(dog->name);
+		free(dog);
 		return (NULL);
 	}
 	_strcpy(dog->name, name);
@@ -61,7 +61,7 @@ int _strlen(char *s)
 }
 
 /**
- * strcpy - copies 2 strings
+ * _strcpy - copies 2 strings
  * @dest: pointer to the buffer in which we copy the string
  * @src: string to be copied
  *
